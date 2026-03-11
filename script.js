@@ -23,3 +23,11 @@ function undo() {
     imageDiv.textContent = "Hover over an image below to display here.";
     imageDiv.style.backgroundImage = "url('')"; // empty url resets
 }
+
+function addTabFocus() {
+    console.log('onload triggered');
+    var images = document.querySelectorAll('.thumbnails img');
+    for (var i = 0; i < images.length; i++) {
+        images[i].setAttribute('tabindex', '0');
+    }
+}
